@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    rgb(186, 7, 241),
+    rgb(5, 80, 240),
+    rgb(186, 7, 241)
+  );
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  align-items: flex-start;
+
+  margin-top: 5rem;
+  font-family: "Poppins", sans-serif;
+}
+.app {
+  border-radius: 1rem;
+  width: 55vw;
+  height: fit-content;
+  padding: 1rem;
+  background-color: transparent;
+  box-shadow: inset 0.5rem 0.5rem 0.5rem rgba(241, 236, 236, 0.445),
+    inset -0.5rem -0.5rem 0.5rem rgba(224, 217, 217, 0.479);
+}
+.container {
+  padding: 1rem;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  color: rgb(27, 26, 26);
+  border: 0;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  flex-basis: 70%;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgba(250, 244, 244, 0.514);
+}
+input[type="text"]::placeholder {
+  color: rgba(53, 51, 51, 0.863);
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+}
+#add-btn {
+  flex-basis: 30%;
+  border: 0;
+  outline: none;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  background-color: rgba(224, 217, 217, 0.781);
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+}
+#pending-tasks {
+  color: rgb(253, 248, 248);
+  text-align: center;
+}
+
+#error {
+  display: none;
+  border: 1px solid #22f106;
+  text-align: center;
+  color: #f53b57;
+  background-color: rgb(0 0 0 / 85%);
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.task {
+  border-radius:0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin:0.5rem;
+  padding: 0.5rem;
+  display:flex;
+  align-items: center;
+
+}
+
+.task-check{
+  flex-basis: 10%;
+}
+.task input[type="checkbox"] {
+  margin-right: 0.8rem;
+  position: relative;
+  appearance: none;
+  border-radius:0.5rem;
+  width:0.5rem;
+  height: 2rem;
+  border:0.1rem solid #dad4d469;
+  box-shadow: 0.2rem 0.2rem rgba(0, 0, 0);
+
+ 
+}
+.task input[type="checkbox"]:before {
+content:"";
+position: absolute;
+transform: translate(-50%,-50%);
+top:50%;
+left:50%;
+}
+.task input[type="checkbox"]:checked {
+background-color: #f53b57;
+border-color: #f53b57;
+}
+.task input[type="checkbox"]:checked::before {
+  position: absolute;
+  content:"\f00c";
+  color:#ffffff;
+  font-size: 1rem;
+  font-family: "Font Awesome 5 free";
+  font-weight:900;
+}
+.taskname {
+  flex-basis:50%;
+  color: white;
+  font-size:1rem;
+  letter-spacing:0.05rem;
+
+
+}
+.edit,.delete {
+  flex-basis:20%;
+}
+.edit {
+  border: 0;
+  background-color:rgba(3, 3, 3, 0.137);
+  padding: 0.5rem;
+  margin-inline: 0.5rem;
+  font-size: 1rem;
+  border-radius:0.5rem;
+  box-shadow: 0.2rem 0.2rem rgba(0, 0, 0);
+  color:white;
+}
+.edit:hover {
+  background-color:white ;
+  color: rgb(0, 0, 0);
+}
+.delete {
+  border: 0;
+  background-color:#f53b57;
+  padding: 0.5rem;
+  margin-inline: 0.5rem;
+  font-size: 1rem;
+  border-radius:0.5rem;
+  box-shadow: 0.2rem 0.2rem rgba(0, 0, 0);
+  color:white;
+
+}
+.delete:hover {
+  background-color:white ;
+  color: #f53b57;
+}
+.completed {
+  text-decoration: line-through;
+}
+
+   
+
+          
+/* Media Query for Mobile Devices */ 
+@media (max-width: 480px) { 
+    body { 
+        background-color: red; 
+    } 
+    .app {
+      border-radius: 1rem;
+      width: 100vw;
+      height:100vh;
+      padding: 0;
+      background-color: transparent;
+      box-shadow:unset;
+    }
+    .container{padding:2rem}
+    input[type="text"] {
+      flex-basis: 60%;
+      width: 1rem;
+    }
+    #wrapper {
+      justify-content: center;
+    }
+    #app-btn {
+      flex-basis: 40%;
+      width: 0.5rem;
+      margin-left: 0.1rem;
+    }
+  
+} 
+  
+/* Media Query for low resolution  Tablets, Ipads */ 
+@media (min-width: 481px) and (max-width: 767px) { 
+    body { 
+        background-color: yellow; 
+    } 
+    .app{
+      width: 80vw;
+    }
+} 
+  
